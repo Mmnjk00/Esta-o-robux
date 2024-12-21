@@ -62,11 +62,12 @@
             border-radius: 10px;
             text-align: center;
             max-width: 400px;
+            position: relative;
         }
         .modal-content h3 {
             margin-top: 0;
         }
-        .close {
+        .close, .close-x {
             background-color: #d9534f;
             color: white;
             border: none;
@@ -76,8 +77,17 @@
             font-size: 16px;
             margin-top: 20px;
         }
-        .close:hover {
+        .close:hover, .close-x:hover {
             background-color: #c9302c;
+        }
+        .close-x {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: transparent;
+            color: black;
+            font-size: 24px;
+            border: none;
         }
     </style>
 </head>
@@ -114,6 +124,7 @@
     <!-- Modal -->
     <div id="modal" class="modal">
         <div class="modal-content">
+            <button class="close-x" onclick="fecharModal()">×</button>
             <h3>Compra de Conta</h3>
             <p id="modal-text"></p>
             <a id="discord-link" href="https://discord.gg/xuAFazcm" target="_blank">
